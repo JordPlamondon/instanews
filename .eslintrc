@@ -14,6 +14,8 @@
     // our rules will go here...
   },
   "globals": {
+    "jQuery": false,
+    "$": false
     // any globals we want to allow will go here
   },
   "env": {
