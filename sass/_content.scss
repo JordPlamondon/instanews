@@ -1,11 +1,19 @@
 $black: black; 
 
-// * {
-//   box-sizing: border-box;
-// }
-// html {
-//   font-size: 14px;
-// }
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 14px;
+}
 body {
-  color: $black;
+  background-color: $black;
+}
+.choosesection {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+}
+#article-selection {
+  left: 30px;
 }
