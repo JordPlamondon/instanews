@@ -3,34 +3,46 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>instanews</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>instanews</title>
   <link rel="stylesheet" href='build/css/style.min.css'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 
 <body>
   <header>
-    <div class="choosesection">
+    <div class="logocontainer">
+      
       <img class="mobiletopimage" src="assets/images/nyt-logo.svg">
-      <form action="/action_page.php">
-        <select name="sections" section id="article-selection" >
-          <option value="home">Home</option>
-          <option value="arts">Arts</option>
-          <option value="business">Business</option>
-          <option value="sports">Sports</option>
-          <option value="technology">Technology</option>
-          <option value="fashion">Fashion</option>
-        </select>
-        <br><br>
-      </form>
+
+      <p>Choose a section:</p>
+      
+      <div class="button">
+        <form action="/action_page.php">
+          <select name="sections" section id="article-selection" class="selectopt">
+            <option value="home">Home</option>
+            <option value="arts">Arts</option>
+            <option value="business">Business</option>
+            <option value="sports">Sports</option>
+            <option value="technology">Technology</option>
+            <option value="fashion">Fashion</option>
+          </select>
+          <br><br>
+        </form>
+      </div>  
     </div>
-    <div id='stories'>
-</div>
+
+    <div id='stories'></div>
 
   </header>
+
+  <div class="loadergif">
+    <img src="assets/images/ajax-loader.gif" alt="Loading" class="loading">
+  </div>
+
+  <section class="newsarticles"></section>
+
   <script src="build/js/scripts.min.js"></script>
 </body>
 
