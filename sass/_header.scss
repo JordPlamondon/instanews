@@ -3,11 +3,15 @@ $white: white;
 %textalign {
   text-align: center;
 }
+%fontsize {
+  font-size: 16px;
+}
 * {
   box-sizing: border-box;
 }
+
 html {
-  font-size: 14px;
+  @extend %fontsize;
 }
 body {
   background-color: $black;
