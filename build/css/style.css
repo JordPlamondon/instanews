@@ -1,4 +1,4 @@
-.logocontainer p, .logocontainer .button, footer p {
+.logocontainer p, .logocontainer .button, .images, footer p {
   text-align: center; }
 
 html, #stories {
@@ -34,8 +34,19 @@ body {
 
 #stories {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 500px 500px 500px; }
+  grid-template-rows: repeat(12, 400px); }
+  @media (min-width: 1024px) {
+    #stories {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 400px); } }
+
+.images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-size: cover;
+  color: white;
+  text-decoration: none; }
 
 footer p {
   color: white; }
