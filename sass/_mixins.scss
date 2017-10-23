@@ -1,5 +1,5 @@
 //media queries 
-$desktop: 1024px;
+$desktop: 1000px;
 $tablet: 600px;
 
 @mixin desktop {
@@ -11,6 +11,15 @@ $tablet: 600px;
   @media (min-width: $tablet) {
     @content;
   }
+}
+//styles
+$black: black; 
+$white: white; 
+%textalign {
+  text-align: center;
+}
+%fontsize {
+  font-size: 16px;
 }
 
 

@@ -1,9 +1,9 @@
-$('#article-selection').on('change', function(){
+$('.selectopt').on('change', function(){
   
-    $('#stories').empty();
+    $('.stories').empty();
     $('.loading').show();
   
-    var selectVal = $('#article-selection').val();
+    var selectVal = $('.selectopt').val();
   
     var url = 'https://api.nytimes.com/svc/topstories/v2/' + selectVal + '.json';
     url += '?' + $.param({
@@ -21,10 +21,8 @@ $('#article-selection').on('change', function(){
               var title = item.abstract;
               var image = item.multimedia[item.multimedia.length - 1].url;
               var url = item.url;
-              $('#stories').append('<a class="images" style="background-image: url(' + image + ')" href="' + url + '"' + '>' + '<div class="#article-selection">' + title + '</div></a>');
+              $('.stories').append('<a class="images" style="background-image: url(' + image + ')" href="' + url + '"' + '>' + '<div class=".selectopt">' + title + '</div></a>');
      
-        $('#article-selection').append(title);
-
       })
 
     }).fail(function (err) {

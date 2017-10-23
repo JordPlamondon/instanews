@@ -1,18 +1,17 @@
-#stories {
-  color: $white;    
-}
 .loading {
   display: block;
   margin: auto;
   width: 40px;
 }
-#stories {
+.stories {
   display: grid;
-  grid-template-rows: repeat(12,400px);
+  grid-template-rows: repeat(12,350px);
   @extend %fontsize;
+  
   @include desktop {
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: repeat(3,400px);
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,450px);
+    color: $white;   
   }
 }
 .images {

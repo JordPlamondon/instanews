@@ -1,15 +1,6 @@
-$black: black; 
-$white: white; 
-%textalign {
-  text-align: center;
-}
-%fontsize {
-  font-size: 16px;
-}
 * {
   box-sizing: border-box;
 }
-
 html {
   @extend %fontsize;
 }
@@ -19,14 +10,34 @@ body {
 .logocontainer {
   display: flex;
   flex-flow: column wrap; 
-  align-content: center;
-  p {
-    color: $white;
-    @extend %textalign;
+  align-items: center;
+  
+  @include desktop {
+    flex-flow: row nowrap;
+    align-content: left;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    
   }
-  .button {
-    @extend %textalign;
+  .mobiletopimage {
+    
+    @include desktop {
+      margin-right: 70px;
+      width: 70px;
+    }
   }
+    p {
+      color: $white;
+      @extend %textalign;
+.button {  
+  display: block;
+  
+  @include desktop {
+        
+    }
+      
+  }
+ }
 }
 
 
