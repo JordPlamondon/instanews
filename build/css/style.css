@@ -34,8 +34,8 @@ body {
 
 #stories {
   display: grid;
-  grid-template-rows: repeat(400px);
-  grid-template-columns: repeat(4, 1fr); }
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 500px 500px 500px; }
 
 footer p {
   color: white; }
