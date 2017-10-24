@@ -8,11 +8,11 @@ body {
   background-color: $black;
   @extend %font;
 }
-.logocontainer {
+.large-logo-container {
   display: flex;
   flex-flow: column wrap; 
   align-items: center;
-  padding-top: 20px;
+  padding-top: 130px;
   
   @include desktop {
     flex-flow: row nowrap;
@@ -20,8 +20,9 @@ body {
     padding-top: 10px;
     padding-bottom: 20px;
   }
-  .topimage {
-    width: 140px;
+  .large-top-image {
+    width: 220px;
+    
     @include desktop {
       margin-right: 80px;
       width: 65px;
@@ -41,7 +42,16 @@ body {
   }
  }
 }
-
+// .small-container {
+//   flex-flow: row nowrap;
+//   padding-left: 30px;
+//   padding-top: 10px;
+//   padding-bottom: 20px;
+// }
+// .small-top-image {
+//   margin-right: 80px;
+//   width: 200px;
+// }
 
 
 

@@ -1,4 +1,4 @@
-.logocontainer p, .images, footer p {
+.large-logo-container p, .images, footer p {
   text-align: center; }
 
 html, .stories {
@@ -42,7 +42,7 @@ body {
 body {
   background-color: black; }
 
-.logocontainer {
+.large-logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,9 +53,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 20px; }
+  padding-top: 130px; }
   @media (min-width: 1000px) {
-    .logocontainer {
+    .large-logo-container {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row nowrap;
@@ -63,15 +63,15 @@ body {
       padding-left: 30px;
       padding-top: 10px;
       padding-bottom: 20px; } }
-  .logocontainer .topimage {
-    width: 140px; }
+  .large-logo-container .large-top-image {
+    width: 220px; }
     @media (min-width: 1000px) {
-      .logocontainer .topimage {
+      .large-logo-container .large-top-image {
         margin-right: 80px;
         width: 65px; } }
-  .logocontainer p {
+  .large-logo-container p {
     color: white; }
-    .logocontainer p #article-selection {
+    .large-logo-container p #article-selection {
       width: 50px; }
 
 .loading {
