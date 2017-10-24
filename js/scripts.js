@@ -21,7 +21,7 @@ $('.selectopt').on('change', function(){
               var title = item.abstract;
               var image = item.multimedia[item.multimedia.length - 1].url;
               var url = item.url;
-              $('.stories').append('<a class="images" style="background-image: url(' + image + ')" href="' + url + '"' + '>' + '<div class=".selectopt">' + title + '</div></a>');
+              $('.stories').append('<a class="images" style="background-image: url(' + image + ')" href="' + url + '"' + '>' + '<div class="selectopt">' + title + '</div></a>');
      
       })
 

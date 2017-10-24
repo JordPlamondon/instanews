@@ -5,19 +5,39 @@
 }
 .stories {
   display: grid;
-  grid-template-rows: repeat(12,350px);
+  grid-template-rows: repeat(12,450px);
   @extend %fontsize;
   
   @include desktop {
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,450px);
-    color: $white;   
   }
 }
 .images {
-  display: flex;
   background-size: cover;
   @extend %textalign;
   color: $white;
   text-decoration: none;
+  overflow: hidden;
+  .selectopt {
+    background: grey;
+    transform: translateY(600px);
+    transition: .5s;
+    
+    @include desktop {
+    transform: translateY(600px);
+    transition: .5s;
+    }
+  }
+
+  &:hover {
+    .selectopt {
+      transform: translateY(300px);
+
+      @include desktop {
+      transform: translateY(300px);
+      }
+    }
+  }
+
 }
