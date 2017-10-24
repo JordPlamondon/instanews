@@ -20,22 +20,26 @@
   text-decoration: none;
   overflow: hidden;
   .selectopt {
-    background: grey;
+    background: rgba(0,0,0,.6);
+    // opacity: 0.7;
+    height: 300px;
     transform: translateY(600px);
-    transition: .5s;
+    transition: .6s ease-in-out;
+
     
     @include desktop {
+      // opacity: 0.7;
     transform: translateY(600px);
-    transition: .5s;
+    transition: .6s ease-in-out;
     }
   }
 
   &:hover {
     .selectopt {
-      transform: translateY(300px);
+      transform: translateY(320px);
 
       @include desktop {
-      transform: translateY(300px);
+      transform: translateY(320px);
       }
     }
   }

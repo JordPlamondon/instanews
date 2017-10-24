@@ -94,24 +94,25 @@ body {
   text-decoration: none;
   overflow: hidden; }
   .images .selectopt {
-    background: grey;
+    background: rgba(0, 0, 0, 0.6);
+    height: 300px;
     -webkit-transform: translateY(600px);
             transform: translateY(600px);
-    -webkit-transition: .5s;
-    transition: .5s; }
+    -webkit-transition: .6s ease-in-out;
+    transition: .6s ease-in-out; }
     @media (min-width: 1000px) {
       .images .selectopt {
         -webkit-transform: translateY(600px);
                 transform: translateY(600px);
-        -webkit-transition: .5s;
-        transition: .5s; } }
+        -webkit-transition: .6s ease-in-out;
+        transition: .6s ease-in-out; } }
   .images:hover .selectopt {
-    -webkit-transform: translateY(300px);
-            transform: translateY(300px); }
+    -webkit-transform: translateY(320px);
+            transform: translateY(320px); }
     @media (min-width: 1000px) {
       .images:hover .selectopt {
-        -webkit-transform: translateY(300px);
-                transform: translateY(300px); } }
+        -webkit-transform: translateY(320px);
+                transform: translateY(320px); } }
 
 footer p {
   color: #c2c2c2; }
