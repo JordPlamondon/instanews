@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-flow: column wrap; 
   align-items: center;
-  padding-top: 130px;
+  padding-top: 110px;
   
   @include desktop {
     flex-flow: row nowrap;
