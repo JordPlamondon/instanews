@@ -19,23 +19,23 @@
   color: $white;
   text-decoration: none;
   overflow: hidden;
-  .selectopt {
+  
+  .select-section {
     background: rgba(0,0,0,.6);
     // opacity: 0.7;
     height: 300px;
     transform: translateY(600px);
-    transition: .6s ease-in-out;
+    transition: .6s ease-out;
 
-    
     @include desktop {
       // opacity: 0.7;
     transform: translateY(600px);
-    transition: .6s ease-in-out;
+    transition: .6s ease-out;
     }
   }
 
   &:hover {
-    .selectopt {
+    .select-section {
       transform: translateY(320px);
 
       @include desktop {

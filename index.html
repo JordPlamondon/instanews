@@ -7,19 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href='build/css/style.min.css'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="selectric.css">
+
   </head>
 
   <body>
     <header>
       <div class="logocontainer">
         
-        <img class="mobiletopimage" src="assets/images/nyt-logo.svg">
+        <img class="topimage" src="assets/images/nyt-logo.svg">
 
         <div class="button">
           <p>Choose a section:</p>
             <form action="/action_page.php">
-              <select name="sections" section id="article-selection" class="selectopt">
+              <select name="sections" section id="article-selection" class="select-section">
+                <option value="home">Sections...</option>  
                 <option value="home">Home</option>
                 <option value="arts">Arts</option>
                 <option value="business">Business</option>
@@ -33,20 +35,23 @@
       </div>
 
     </header>
+
+    <div class="loadergif">
+        <img src="assets/images/ajax-loader.gif" alt="Loading" class="loading">
+      </div>
     
     <div class='stories'></div>
 
-    <div class="loadergif">
-      <img src="assets/images/ajax-loader.gif" alt="Loading" class="loading">
-    </div>
-
     <section class="newsarticles"></section>
 
+    <footer>
+      <p>© Copyright 2016 Instanews</p>
+    </footer>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery.selectric.min.js"></script>
     <script src="build/js/scripts.min.js"></script>
   </body>
-
-  <footer>
-    <p>© Copyright 2016 Instanews</p>
-  </footer>
 
 </html>

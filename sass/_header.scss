@@ -16,22 +16,23 @@ body {
   
   @include desktop {
     flex-flow: row nowrap;
-    align-content: left;
-    padding-top: 20px;
-    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
-  .mobiletopimage {
+  .topimage {
     width: 140px;
     @include desktop {
-      margin-right: 70px;
-      width: 70px;
+      margin-right: 80px;
+      width: 65px;
     }
   }
     p {
       color: $white;
       @extend %textalign;
-.button {  
-  width: 500px;
+
+#article-selection {
+  width: 50px;
 
   @include desktop {
         
