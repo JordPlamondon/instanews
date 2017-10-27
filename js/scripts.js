@@ -14,12 +14,11 @@ $('.select-section').on('change', function(){
     
     var url = 'https://api.nytimes.com/svc/topstories/v2/' + selectVal + '.json';
     url += '?' + $.param({
-      'api-key': "80315f98187c49169c887403d2c3f766"
+      'api-key': '80315f98187c49169c887403d2c3f766'
     });
     
     $.ajax({url: url,method: 'GET', 
   }).done(function (data) {
-
         data.results.filter(function (item) {
           if (item.multimedia.length !== 0) {
             return item;
@@ -31,7 +30,7 @@ $('.select-section').on('change', function(){
           $('.stories').append('<a class="images" style="background-image: url(' + image + ')" href="' + url + '"' + '>' + '<div class="select-section">' + title + '</div></a>');
           
         })
-        
+
       }).fail(function (err) {
         throw err;
 
