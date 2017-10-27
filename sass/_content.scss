@@ -1,28 +1,42 @@
 .loading {
-  display: block;
   margin: auto;
   width: 40px;
-
+  display: none;
 }
+
+#loader-gif {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .stories {
   display: grid;
   grid-template-rows: repeat(12,450px);
   @extend %fontsize;
-  
+
   @include desktop {
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,450px);
   }
 }
+
 .images {
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   @extend %textalign;
   color: $white;
   text-decoration: none;
   overflow: hidden;
+  // width: 25%;
   
   .select-section {
     background: rgba(0,0,0,.6);
+    background-repeat: no-repeat;
+    
     // opacity: 0.7;
     height: 300px;
     transform: translateY(600px);
