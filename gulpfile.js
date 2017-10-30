@@ -27,7 +27,7 @@ gulp.task('sass',
 
 gulp.task('scripts', ['lint', 'babel'],
   function () {
-    gulp.src('./js/*.js')
+    gulp.src('./js/es5/*.js')
       .pipe(uglify())
       .pipe(rename({
         extname: '.min.js'
@@ -45,9 +45,9 @@ gulp.task('scripts', ['lint', 'babel'],
 // });
 
 gulp.task('babel', () => {
-    return gulp.src('js/es5')
+    return gulp.src('js/es6/*.js')
         .pipe(babel())
-        .pipe(gulp.dest('js/es6'));
+        .pipe(gulp.dest('js/es5'));
 });
 
   gulp.task('default', ['scripts']);
@@ -55,7 +55,8 @@ gulp.task('babel', () => {
 gulp.task('watch',
   function () {
     gulp.watch('sass/*.scss', ['sass'])
-    gulp.watch('js/*.js', ['scripts']);
+    gulp.watch('js/es6/*.js', ['scripts']);
+
   });
 
 gulp.task('browser-sync',
