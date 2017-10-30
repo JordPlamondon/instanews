@@ -8,10 +8,12 @@
   display: grid;
   grid-template-rows: repeat(12,450px);
   @extend %fontsize;
+  // object-fit: fill;
   
   @include desktop {
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(3,450px);
+    // object-fit: fill;
   }
 }
 .images {

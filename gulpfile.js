@@ -8,7 +8,8 @@ var uglify = require('gulp-uglify'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   cssnano = require('gulp-cssnano'),
-  prettyError = require('gulp-prettyerror');
+  prettyError = require('gulp-prettyerror'),
+  babel = require('gulp-babel');
 
 gulp.task('sass',
   function () {
@@ -24,7 +25,7 @@ gulp.task('sass',
       .pipe(gulp.dest('./build/css'));
   });
 
-gulp.task('scripts', ['lint'],
+gulp.task('scripts', ['lint', 'babel'],
   function () {
     gulp.src('./js/*.js')
       .pipe(uglify())
@@ -34,15 +35,21 @@ gulp.task('scripts', ['lint'],
       .pipe(gulp.dest('./build/js'))
   });
 
+// const input = './js/*.js';
+// const output = './js/transpiled'; 
 
-gulp.task('lint',
-  function () {
-    return gulp.src(['./js/*.js'])
-      .pipe(eslint())
-      .pipe(eslint.format())
-      .pipe(eslint.failAfterError());
-  });
-  
+// gulp.task('babel', function (){
+//   return gulp.src(input)
+//     .pipe(babel())
+//     .pipe(gulp.dest(output));
+// });
+
+gulp.task('babel', () => {
+    return gulp.src('js/es5')
+        .pipe(babel())
+        .pipe(gulp.dest('js/es6'));
+});
+
   gulp.task('default', ['scripts']);
 
 gulp.task('watch',
