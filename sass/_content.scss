@@ -11,8 +11,7 @@
   
   @include desktop {
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,450px);
-    
+    grid-template-rows: repeat(3,450px);  
   }
 }
 

@@ -12,7 +12,7 @@ var uglify = require('gulp-uglify'),
   babel = require('gulp-babel');
 
 gulp.task('sass',
-  function () {
+  () => {
     gulp.src('./sass/style.scss')
       .pipe(prettyError()) //error handling
       .pipe(sass())
@@ -26,7 +26,7 @@ gulp.task('sass',
   });
 
 gulp.task('scripts', ['lint', 'babel'],
-  function () {
+  () => {
     gulp.src('./js/es5/*.js')
       .pipe(uglify())
       .pipe(rename({
@@ -53,14 +53,14 @@ gulp.task('babel', () => {
   gulp.task('default', ['scripts']);
 
 gulp.task('watch',
-  function () {
+  () => {
     gulp.watch('sass/*.scss', ['sass'])
     gulp.watch('js/es6/*.js', ['scripts']);
 
   });
 
 gulp.task('browser-sync',
-  function () {
+  () => {
     browserSync.init({
       server: {
         baseDir: "./"
