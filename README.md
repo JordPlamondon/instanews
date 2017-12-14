@@ -1,3 +1,6 @@
+<img width="1274" alt="screen shot 2017-12-14 at 12 05 31 am" src="https://user-images.githubusercontent.com/32422707/33981683-a956216c-e062-11e7-88b1-80ab4b508d44.png">
+
+
 Project 2 - Instanews
 
 Summary:
